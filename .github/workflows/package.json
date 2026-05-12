@@ -1,0 +1,8 @@
+{
+  "name": "github-actions-ci-cd",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo Testes executados com sucesso",
+    "build": "echo Build realizado com sucesso"
+  }
+}
