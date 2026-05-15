@@ -30,7 +30,7 @@ jobs:
       - name: Build imagem Docker
         run: docker build -t github-actions-ci-cd .
 
-              - name: Login Docker Hub
+      - name: Login Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
