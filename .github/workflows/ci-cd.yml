@@ -26,3 +26,6 @@ jobs:
 
       - name: Build aplicação
         run: npm run build
+
+      - name: Build imagem Docker
+        run: docker build -t github-actions-ci-cd .
