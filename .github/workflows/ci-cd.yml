@@ -29,3 +29,15 @@ jobs:
 
       - name: Build imagem Docker
         run: docker build -t github-actions-ci-cd .
+
+              - name: Login Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Tag imagem Docker
+        run: docker tag github-actions-ci-cd gabrielcardenette/github-actions-ci-cd:latest
+
+      - name: Push imagem Docker
+        run: docker push gabrielcardenette/github-actions-ci-cd:latest
